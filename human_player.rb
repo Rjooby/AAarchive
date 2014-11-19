@@ -30,7 +30,6 @@ class HumanPlayer
       [hash[x], hash[y]],
       [hash[i], hash[j]]
     ]
-
   end
 
   PARSE_HASH = {
