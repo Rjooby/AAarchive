@@ -13,6 +13,7 @@ class Rook < SlidingPiece
 
   def initialize(pos, color, board)
     super(pos, color, board)
+    @board = board.board
     @rep = (color == :black ? 'R' : 'r')
   end
 end

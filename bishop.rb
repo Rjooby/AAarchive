@@ -12,6 +12,7 @@ class Bishop < SlidingPiece
 
   def initialize(pos, color, board)
     super(pos, color, board)
+    @board = board.board
     @rep = (color == :black ? 'B' : 'b')
   end
 end

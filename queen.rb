@@ -16,6 +16,7 @@ class Queen < SlidingPiece
 
   def initialize(pos, color, board)
     super(pos, color, board)
+    @board = board.board
     @rep = (color == :black ? 'Q' : 'q')
   end
 end

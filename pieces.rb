@@ -5,7 +5,7 @@ class Piece
   def initialize(pos, color, board)
     @pos = pos
     @color = color
-    @board = board
+    @board = board.board
     @first_move = true
 
     @board[pos[0]][pos[1]] = self
@@ -16,7 +16,7 @@ class Piece
   end
 
   def inspect
-    return {color: color, pos: pos, class: self.class.to_s}.inspect
+   return {color: color, pos: pos, class: self.class.to_s}.inspect
   end
 
 

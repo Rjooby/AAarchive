@@ -16,6 +16,7 @@ class Knight < SteppingPiece
 
   def initialize(pos, color, board)
     super(pos, color, board)
+    @board = board.board
     @rep = (color == :black ? 'K' : 'k')
 
   end
