@@ -31,7 +31,7 @@ class Piece
     end
   end
 
-
+---
 end
 
 class SlidingPiece < Piece
