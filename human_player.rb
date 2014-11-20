@@ -24,7 +24,7 @@ class HumanPlayer
     end
 
 
-    [in_arr.shift,in_arr]
+    [in_arr] #array of all moves including starting move
   end
 
   PARSE_HASH = {

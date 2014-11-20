@@ -26,12 +26,17 @@ class Piece
   end
 
   def perform_moves(move_sequence)
-    perform_moves! if valid_move_seq?(move_sequence)
+    if valid_move_seq?(move_sequence)
+      puts perform_moves!
+    end
+
   end
 
   def perform_moves!(move_sequence)
-    #move_sequence should be an array of coordinate steps
+    #move_sequence should be an array of coordinate steps fix This
     if move_sequence.size == 1
+      p move_sequence[0]
+      puts !self.perform_slide(move_sequence[0])
       if !self.perform_slide(move_sequence[0])
         return false if !self.perform_jump(move_sequence[0])
       end
@@ -69,7 +74,7 @@ class Piece
     else
       return false
     end
-    return true
+    true
   end
 
   def perform_jump(end_pos)
