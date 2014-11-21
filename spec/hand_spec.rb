@@ -4,6 +4,15 @@ require 'hand'
 describe Hand do
   subject(:hand){Hand.new}
 
+  it "initializes empty"
+
+
+
+  it "receives cards from the deck"
+
+  it "discards back to the deck"
+  it "doesn't keep copies of cards"
+
   describe "#beats?" do
 
     it "Royal Flush beats Straight Flush"
@@ -19,7 +28,7 @@ describe Hand do
 
     it "handles ties"
     # TODO : More tests
-    
+
   end
 
 end
