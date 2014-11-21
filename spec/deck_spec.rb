@@ -14,6 +14,10 @@ describe Deck do
 
   it "puts discarded cards on the bottom"
 
-  it "deals off the top"
+  describe "#deal(player)" do
+    it "deals off the top"
+
+  end
+
   it "doesn't deal when empty"
 end

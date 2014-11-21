@@ -27,5 +27,22 @@ describe Game do
 
   it "starts the game"
 
-  it "intializes with players and deck"  
+  it "intializes with players and deck"
+
+  it "deals"
+    # describe "#deal"
+    # it "distributes cards"
+    #
+    # describe "#receive_cards(cards)" do
+    #   it "receives a single card"
+    #
+    #   it "receives multiple cards" do
+    #     # mock cards
+    #
+    #     player.receive_cards(cards)
+    #
+    #     expect(player.hand).to eq(cards)
+    #   end
+    # end
+
 end

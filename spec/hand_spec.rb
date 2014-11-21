@@ -4,14 +4,28 @@ require 'hand'
 describe Hand do
   subject(:hand){Hand.new}
 
-  it "initializes empty"
-
-
+  it "responds to empty"
+  it "initializes empty" do
+    expect(hand).to be_empty
+  end
 
   it "receives cards from the deck"
 
-  it "discards back to the deck"
-  it "doesn't keep copies of cards"
+
+  describe "#return_cards(deck)"
+    it "empties itself into the deck" do
+      # put cards in hand
+      # return cards
+      expect(deck).to receive(return).with(cards)
+    end
+
+    it "discards specific cards to the deck" do
+      expect(deck).to receive(return).with(cards[1])
+    end
+  end
+
+  # describe "#discards"
+  # it "doesn't keep copies of cards"
 
   describe "#beats?" do
 
