@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   validates :name, presence: true
 
-  has_many :contacts
+  has_many :contacts, dependent: :destroy
 
   has_many :contact_shares
 

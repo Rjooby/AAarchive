@@ -21,18 +21,18 @@ scheme: 'http',
 host: 'localhost',
 port: 3000,
 path: '/users/3',
-query_values: {
-  'some_category[a_key]' => 'another value',
-  'some_category[a_second_key]' => 'yet another value',
-  'some_category[inner_inner_hash][key]' => 'value',
-  'something_else' => 'aaahhhhh'
-}
+# query_values: {
+#   'some_category[a_key]' => 'another value',
+#   'some_category[a_second_key]' => 'yet another value',
+#   'some_category[inner_inner_hash][key]' => 'value',
+#   'something_else' => 'aaahhhhh'
+# }
 ).to_s
 
 
 
 # puts RestClient.get(url3)
 # puts url3
-puts RestClient.post(url2, user: { name: nil })
+# puts RestClient.post(url2, user: { name: nil })
 # # puts RestClient.delete(url3)
-# puts RestClient.patch(url3)
+puts RestClient.patch(url3, user: { name: 'Jacob' })
