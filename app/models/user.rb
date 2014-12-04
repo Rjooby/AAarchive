@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  validates :name, presence: true
+  validates :username, presence: true
 
   has_many :contacts, dependent: :destroy
 

@@ -30,21 +30,18 @@ class UsersController < ApplicationController
   end
 
   def update
+    @updated_record = User.find_by_id(params[:id])
 
-    @updated = User.update(params[:id], user_params)
-    if @updated
-      render json: @updated
+
+
+    if @updated_record.update(user_params)
+      render json: @updated_record
     else
       render(
-        json: @updated.errors.full_messages, status: :unprocessable_entity)
+        json: @updated_record.errors.full_messages, status: :unprocessable_entity
       )
     end
-
-
-
   end
-
-
 
 
 private

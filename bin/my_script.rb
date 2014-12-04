@@ -5,14 +5,14 @@ url = Addressable::URI.new(
   scheme: 'http',
   host: 'localhost',
   port: 3000,
-  path: '/users'
+  path: '/contacts'
 ).to_s
 
 url2 = Addressable::URI.new(
   scheme: 'http',
   host: 'localhost',
   port: 3000,
-  path: '/users'
+  path: '/contact_shares'
 ).to_s
 
 
@@ -20,7 +20,7 @@ url3 = Addressable::URI.new(
 scheme: 'http',
 host: 'localhost',
 port: 3000,
-path: '/users/3',
+path: '/users/8/contacts',
 # query_values: {
 #   'some_category[a_key]' => 'another value',
 #   'some_category[a_second_key]' => 'yet another value',
@@ -31,8 +31,8 @@ path: '/users/3',
 
 
 
-# puts RestClient.get(url3)
+puts RestClient.get(url3)
 # puts url3
-# puts RestClient.post(url2, user: { name: nil })
+# puts RestClient.post(url2, contact_share: { user_id: 2, contact_id: 7 })
 # # puts RestClient.delete(url3)
-puts RestClient.patch(url3, user: { name: 'Jacob' })
+# puts RestClient.patch(url3, contact: { email: 'lvewrs@e.ri' })
