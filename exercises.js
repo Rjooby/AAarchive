@@ -39,10 +39,7 @@ Array.prototype.myEach = function (f) {
 
   for (i = 0; i < this.length; i++) {
     f(this[i]);
-
   }
-
-
 };
 
 Array.prototype.myMap = function (f) {
@@ -102,5 +99,70 @@ var range = function(start,end) {
   return range(start, end - 1).concat(end);
 }
 
+var exp1 = function(num,exp) {
+  if (exp === 0) { return 1;}
+  return (num * exp1(num, exp -1));
+};
 
-console.log(range(2,5));
+var exp2 = function(num,exp) {
+  if (exp === 0) { return 1;}
+  if (exp === 1) { return num;}
+  if (exp % 2 === 0) { return ((exp2(num, exp/2))*(exp2(num, exp/2)));}
+  if (exp % 2 === 1) { return (num*(exp2(num, (exp-1)/2))*(exp2(num, (exp-1)/2)));}
+}
+
+var fibs = function(n) {
+  if (n === 1) { return [1]}
+  if (n === 2) { return [1,1]}
+  return fibs(n-1).concat(fibs(n-1)[fibs(n-1).length - 1] + fibs(n-2)[fibs(n-2).length - 1])
+}
+
+Array.prototype.binarySearch = function (n) {
+  var point = Math.floor(this.length/2);
+  if (this[point] === n) { return point; }
+  if (this.length === 1) { return nil; }
+  if (n > this[point]) {
+    return (point + (this.slice(point, this.length).binarySearch(n)));
+  } else {
+    return (this.slice(0, point)).binarySearch(n);
+  }
+}
+
+var makeChange = function(change, coins) {
+  if (change === 0) {
+    return [];
+    }
+  if (change < coins.sort[1]) {
+    return null;
+    }
+  coins.reverse()
+  var bestChange = null;
+  for (var i = 0; i < coins.length; i++) {
+      if (coins[i] > change) { continue;}
+       var remainder = change - coins[i];
+       var bestRemainder = makeChange(remainder, coins.slice(i,coins.length));
+       if (bestRemainder === null) {continue;}
+       var thisChange = [coins[i]].concat(bestRemainder);
+       if (bestChange === null || (thisChange.length < bestChange.length)) {
+         bestChange = thisChange;
+
+     }
+  };
+
+  return bestChange;
+
+};
+
+Array.prototype.subsets = function () {
+  if (this.length === 0) {return [[]];}
+  var piece = (this.slice(0, (this.length)-1).subsets());
+  var that = this
+  return piece.concat(
+      piece.map(
+        function(set) { return set.concat([life[life.length-1]]); }
+    )
+    );
+
+};
+
+console.log([1,2,3].subsets());
