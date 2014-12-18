@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title>THUMBNAILS</title>
+    <script src="../js/jquery-2.1.1.js"></script>
+    <script src="../js/thumbnail.js"></script>
+    <link href="../css/thumbnail.css" rel="stylesheet" type="text/css">
+
+  </head>
+  <body>
+    <figure class="thumbnails">
+
+      <ul class="active">
+      </ul>
+
+
+      <ul class = "gutter">
+
+        <a class="nav left">&lt;</a>
+
+
+        <ul class="gutter-images">
+          <img src="../images/gerrard.jpg" />
+          <img src="../images/coutinho.jpg" alt="" />
+          <img src="../images/henderson.jpg" alt="" />
+          <img src="../images/sterling.jpg" alt="" />
+          <img src="../images/sturridge.jpg" alt="" />
+          <img src="../images/lallana.jpg" alt="" />
+
+        </ul>
+        <a class="nav right">&gt;</a>
+        <div></div>
+
+      </ul>
+
+    </figure>
+
+
+    <script>
+    $(function() {
+      $('.thumbnails').thumbnail();
+    })
+    </script>
+
+
+  </body>
+</html>
