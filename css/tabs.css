@@ -1,0 +1,30 @@
+
+html, body, ul, li, p, a{
+  padding: 0;
+  border: 0;
+  margin: 0;
+
+}
+
+ul {
+  list-style: none;
+}
+
+.tabs a.active{
+  font-weight: bold;
+}
+
+li.tab-pane{
+  display: none;
+  transition: opacity .5s linear;
+}
+
+li.tab-pane.active{
+  display: block;
+  opacity: 1;
+}
+
+li.tab-pane.transitioning{
+  display: block;
+  opacity: 0;
+}
