@@ -1,0 +1,40 @@
+html, body, ul, li, p, a, img{
+  padding: 0;
+  border: 0;
+  margin: 0;
+
+}
+
+ul.carousel{
+  height: 180px;
+  width: 260px;
+  margin: 200px auto;
+}
+
+ul.carousel .items{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+ul.carousel .items img{
+  display: none;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+ul.carousel .items img.active{
+  display: block;
+  left: 0%;
+  transition: left .5s linear;
+}
+
+ul.carousel .items img.active.right{
+  left: 100%;
+}
+
+ul.carousel .items img.active.left{
+  left: -100%;
+}
