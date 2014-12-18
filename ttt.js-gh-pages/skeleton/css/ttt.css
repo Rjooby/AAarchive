@@ -1,0 +1,49 @@
+
+html, body, ul, li, h1 {
+  border: 0;
+  padding: 0;
+  margin: 0;
+
+  font: inherit;
+  font-decoration: inherit;
+}
+
+.group:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+ul {
+  list-style: none;
+}
+
+ul{
+  border: 5px solid black;
+  width: 300px;
+  background: red;
+  margin: 50px auto;
+}
+
+li {
+  float: left;
+  width: 90px;
+  height: 90px;
+  border: 5px solid black;
+  background: grey;
+}
+
+li.x {
+  background: blue;
+}
+
+li.o {
+  background: red;
+}
+
+h1 {
+  font: 40px "Comic Sans MS";
+  width: 300px;
+  margin: 50px auto;
+  text-align: center;
+}

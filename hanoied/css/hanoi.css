@@ -1,0 +1,73 @@
+
+html, body, ul, li, h1 {
+  border: 0;
+  padding: 0;
+  margin: 0;
+
+  font: inherit;
+  font-decoration: inherit;
+}
+
+
+ul {
+  list-style: none;
+}
+
+figure{
+  width: 450px;
+  padding: 10px;
+  background: #F5D3DA;
+  margin: 50px auto;
+  border: 10px solid black;
+
+}
+
+
+ul{
+  border: 5px solid black;
+  width: 100px;
+  background: #BDE1F0;
+  margin: 10px;
+  padding: 10px;
+  float: left;
+}
+
+ul.highlight, ul:hover{
+  background: #901596;
+}
+
+
+li {
+  float: left;
+  width: 90px;
+  height: 90px;
+  border: 5px solid black;
+  background: white;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+li.filled {
+  background: #CDA7DB;
+}
+
+h1 {
+  font: 40px "Comic Sans MS";
+  width: 300px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+h2 {
+  font: 40px "Courier New";
+  color: white;
+  margin: 25px auto;
+  text-align: center;
+  text-shadow: black 2px 2px;
+}
+
+.group:after {
+  content: "";
+  display: block;
+  clear: both;
+}
