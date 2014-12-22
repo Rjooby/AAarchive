@@ -21,7 +21,10 @@ Pokedex.Models.Pokemon = Backbone.Model.extend({
 
 });
 
-Pokedex.Models.Toy = Backbone.Model.extend({});
+Pokedex.Models.Toy = Backbone.Model.extend({
+  urlRoot: "/toys"
+
+});
 
 Pokedex.Collections.Pokemon = Backbone.Collection.extend({
   url: "/pokemon",
@@ -73,6 +76,8 @@ window.Pokedex.RootView = function ($el) {
   });
 
   this.$pokeDetail.on("click", "ul.toys", this.selectToyFromList.bind(this));
+
+  this.$toyDetail.change(this.reassignToy.bind(this));
 
 };
 
