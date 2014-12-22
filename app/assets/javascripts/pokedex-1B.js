@@ -11,7 +11,18 @@ Pokedex.RootView.prototype.renderPokemonDetail = function (pokemon) {
     $ul.append($li);
   });
 
+  var $toys = $("<ul></ul>").addClass("toys");
+  $ul.append($toys);
   this.$pokeDetail.html($ul);
+
+  var pokedex = this;
+  pokemon.fetch({
+    success: function () {
+      pokemon.toys().each(function (toy){
+        pokedex.addToyToList(toy);
+      })
+    }
+  })
 };
 
 Pokedex.RootView.prototype.selectPokemonFromList = function (event) {
