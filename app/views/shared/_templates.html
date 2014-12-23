@@ -43,7 +43,7 @@
     }; %>
 
   <select data-pokemon-id="<%%= toy.escape('pokemon_id') %>" data-toy-id="<%%= toy.id %>">
-    <%% pokemon.each(function(poke){ %>
+    <%% _.each(pokemon, function(poke){ %>
       <option value="<%%= poke.id %>"
 
       <%% if (poke.id == toy.escape("pokemon_id")) {%>
