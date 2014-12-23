@@ -16,9 +16,13 @@ Pokedex.Views.PokemonIndex = Backbone.View.extend({
 
   },
 
-  refreshPokemon: function (options) {
+  refreshPokemon: function (options, callbackPoke, callbackToy) {
+    var that = this;
     this.collection.fetch({
-      success: this.render.bind(this)
+      success: function () {
+        that.render();
+        callbackPoke && callbackPoke(callbackToy);
+      }
     });
   },
 
@@ -32,11 +36,9 @@ Pokedex.Views.PokemonIndex = Backbone.View.extend({
 
   selectPokemonFromList: function (event) {
     var $pokeLi = $(event.target);
-    var poke = this.collection.findWhere({id: $pokeLi.data("id")});
-    var detail = new Pokedex.Views.PokemonDetail({model: poke});
-    $("#pokedex .pokemon-detail").html(detail.$el);
-    detail.refreshPokemon();
+    Backbone.history.navigate('/pokemon/' + $pokeLi.data("id"), {trigger: true});
   }
+
 });
 
 Pokedex.Views.PokemonDetail = Backbone.View.extend({
@@ -44,11 +46,12 @@ Pokedex.Views.PokemonDetail = Backbone.View.extend({
     "click .toys li" : "selectToyFromList"
   },
 
-  refreshPokemon: function (options) {
+  refreshPokemon: function (options, callback) {
     var that = this;
     this.model.fetch({
       success: (function() {
         that.render();
+        callback && callback();
       }).bind(this)
     });
   },
@@ -67,10 +70,7 @@ Pokedex.Views.PokemonDetail = Backbone.View.extend({
 
   selectToyFromList: function (event) {
     var $toyLi = $(event.target);
-    var toy = this.model.toys().findWhere({id: $toyLi.data("id")});
-    var toyDetail = new Pokedex.Views.ToyDetail({model: toy});
-    $("#pokedex .toy-detail").html(toyDetail.$el);
-    toyDetail.render();
+    Backbone.history.navigate('pokemon/' + $toyLi.data("pokemon-id") + "/toys/" + $toyLi.data("id"), {trigger: true});
   }
 });
 
@@ -82,8 +82,10 @@ Pokedex.Views.ToyDetail = Backbone.View.extend({
   }
 });
 
-$(function () {
-  var pokemonIndex = new Pokedex.Views.PokemonIndex();
-  pokemonIndex.refreshPokemon();
-  $("#pokedex .pokemon-list").html(pokemonIndex.$el);
-});
+
+
+// $(function () {
+//   var pokemonIndex = new Pokedex.Views.PokemonIndex();
+//   pokemonIndex.refreshPokemon();
+//   $("#pokedex .pokemon-list").html(pokemonIndex.$el);
+// });
