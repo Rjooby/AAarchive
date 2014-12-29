@@ -1,0 +1,10 @@
+
+<ul>
+  <% posts.models.forEach(function (post) { %>
+    <li> <a href="#/posts/<%=post.get('id')%>"><%= post.escape('title') %></a>
+      <button data-id="<%= post.get('id')%>" class="delete">Delete Post</button>
+    </li>
+    <% }) %>
+</ul>
+
+<a href="#/posts/new">Create Post</a>
