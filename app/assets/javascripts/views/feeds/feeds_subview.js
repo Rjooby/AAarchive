@@ -21,7 +21,7 @@ NewsReader.Views.FeedsSubview = Backbone.View.extend({
   deleteFeed: function (event) {
     this.model.destroy({
       success: function () {
-        Backbone.history.navigate("feeds", {trigger: true})
+        Backbone.history.navigate("feeds", {trigger: true});
       }
     });
 
