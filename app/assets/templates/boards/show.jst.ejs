@@ -1,0 +1,9 @@
+<h3> <%=board.escape("title")%> </h3>
+<%console.log(board.lists())%>
+<ul class="lists">
+  <%board.lists().forEach(function (list){ %>
+    <li> <%= list.escape("title") %></li>
+  <% }); %>
+</ul>
+
+<a href="#/boards">back</a>
