@@ -1,0 +1,29 @@
+/* PHASE 4: Footer */
+.footbar{
+  color: grey;
+  background: white;
+  font-size: 14px;
+  border: 1px solid gray;
+  border-top: none;
+  width: 900px;
+  margin: auto;
+}
+
+.footbar-copyright{
+  float: left;
+  padding: 15px 20px;
+
+}
+
+ul.footbar-links{
+  float: right;
+}
+
+ul.footbar-links li{
+  float: left;
+}
+
+ul.footbar-links a{
+  padding: 20px 20px;
+  display: block;
+}
