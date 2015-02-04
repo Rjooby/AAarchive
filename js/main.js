@@ -27,7 +27,7 @@ if (room === '') {
   //
 }
 
-var socket = io.connect('http://rjooby.github.io/chat');
+var socket = io.connect('http://rjooby.github.io');
 
 if (room !== '') {
   console.log('Create or join room', room);
