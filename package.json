@@ -1,0 +1,24 @@
+{
+  "name": "step6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Rjooby/chat.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rjooby/chat/issues"
+  },
+  "homepage": "https://github.com/Rjooby/chat",
+
+  "engines": {
+    "node": "0.10.x"
+  }
+}
