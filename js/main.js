@@ -327,4 +327,3 @@ function removeCN(sdpLines, mLineIndex) {
   sdpLines[mLineIndex] = mLineElements.join(' ');
   return sdpLines;
 }
-
