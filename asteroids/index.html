@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>Asteroids, yo</title>
+    <script charset="utf-8" src="./lib/util.js"></script>
+    <script charset="utf-8" src="./lib/keymaster.js"></script>
+    <script charset="utf-8" src="./lib/movingObject.js"></script>
+    <script charset="utf-8" src="./lib/bullet.js"></script>    
+    <script charset="utf-8" src="./lib/asteroid.js"></script>
+    <script charset="utf-8" src="./lib/ship.js"></script>
+    <script charset="utf-8" src="./lib/game.js"></script>
+    <script charset="utf-8" src="./lib/gameView.js"></script>
+
+
+  </head>
+  <body>
+
+    <canvas id="game-canvas" style="border:solid 1px"></canvas>
+
+      <script charset="utf-8">
+        var canvas = document.getElementById("game-canvas");
+        var ctx = canvas.getContext("2d");
+        var game = new Asteroids.Game();
+        var gameView = new Asteroids.GameView(game, ctx);
+        canvas.width = game.DIM_X;
+        canvas.height = game.DIM_Y;
+        gameView.start();
+      </script>
+
+  </body>
+</html>
