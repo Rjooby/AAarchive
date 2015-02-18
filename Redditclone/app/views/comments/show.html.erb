@@ -1,0 +1,7 @@
+<h2>Reply</h2>
+
+<%= @comment.content %>
+
+<br>
+
+<%= render "form", parent_comment_id: @comment.id, post_id: @comment.post_id %>

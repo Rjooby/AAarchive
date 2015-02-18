@@ -1,0 +1,16 @@
+
+<form action="<%= url %>" method="POST">
+  <%=auth_token_input%>
+  <% if action == :edit %>
+    <%=method_input("PATCH")%>
+  <%end%>
+
+  <label> Sub Name </label>
+  <input type="text" name="sub[title]" value="<%=sub.title%>">
+
+  <label> Description </label>
+  <textarea name="sub[description]"><%=sub.description%></textarea>
+
+    <input type="submit" value="Submit">
+
+</form>
