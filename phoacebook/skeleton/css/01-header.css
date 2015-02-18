@@ -1,0 +1,57 @@
+/* PHASE 1: Header */
+
+body{
+  font-weight: 300px;
+  font-family: Roboto;
+  font-size: 14px;
+  background: #E6E6E6;
+}
+
+header.navbar{
+  position: relative;
+  width: 100%;
+  background: red;
+  color: white;
+  z-index: 1;
+}
+
+.navbar a:hover{
+  background: black;
+}
+
+.navbar-center{
+  width: 900px;
+  margin: auto;
+}
+
+.navbar-title{
+  float: left;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  padding: 15px 20px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.navbar-links{
+  float: right;
+}
+
+/* ul.navbar-links{
+  display:block;
+} */
+
+
+ul.navbar-links li{
+  float: left;
+  border-left: 1px solid white;
+}
+
+ul.navbar-links a{
+  display: block;
+  padding: 16px 20px;
+}
+
+ul.navbar-links:last-child {
+  border-right: 1px solid white; /* last-child weirdness - applies to first item floated left */
+}

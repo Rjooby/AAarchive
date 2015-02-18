@@ -1,0 +1,40 @@
+/* PHASE 2: Notifications */
+
+
+pre {
+  display: inline-block;
+  padding: 2px 5px;
+  background: black;
+  border-radius: 50px;
+}
+
+li.notifs {
+  position: relative;
+}
+
+ul.dropdown {
+  display: none;
+}
+
+li.notifs:hover a:before{
+}
+
+li.notifs:hover ul.dropdown {
+  display: block;
+  position: absolute;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+ul.dropdown li{
+  width: 240px;
+  color: #000;
+  white-space: nowrap;
+  padding: 15px 20px;
+  border-bottom: 1px solid gray;
+
+}
+
+ul.dropdown li:last-child {
+  border-bottom: none;
+}

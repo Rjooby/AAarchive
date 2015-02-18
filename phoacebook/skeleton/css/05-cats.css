@@ -1,0 +1,33 @@
+/* PHASE 5: Cats */
+section.content-header {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+section.content-header h1,button.addFriend{
+  position: absolute;
+}
+
+section.content-header h1 {
+  font-size: 36px;
+  color:white;
+  position: absolute;
+  font-weight: 100;
+  left: 240px;
+  bottom: 20px;
+  text-shadow: black 0 0 10px;
+}
+
+section.content-header button {
+  font-size: 16px;
+  font-weight: bold;
+  color:black;
+  background: #fff;
+  position: absolute;
+  right: 20px;
+  bottom: 30px;
+  padding: 12px 20px;
+  border-radius: 5px;
+  border: 1px solid black;
+}

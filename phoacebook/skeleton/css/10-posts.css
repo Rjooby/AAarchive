@@ -1,0 +1,7 @@
+/* PHASE 10: Posts */
+
+article.post {
+  border-top: 1px solid gray;
+  float: left;
+  margin: 0 20px;
+}
