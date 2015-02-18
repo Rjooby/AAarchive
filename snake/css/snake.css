@@ -1,0 +1,48 @@
+head, body, ul, li, html {
+  margin: 0;
+  padding: 0;
+  border: 0;
+
+}
+
+ul {
+  list-style: none;
+}
+
+ul {
+  width: 440px;
+  background: red;
+  border: 1px solid black;
+  margin: 20px auto;
+
+}
+
+
+li {
+  height: 20px;
+  width: 20px;
+  border: 1px solid black;
+  float: left;
+  background: grey;
+}
+
+li.apple {
+  background: red;
+}
+
+li.snake {
+  background: yellow;
+}
+
+h1 {
+  width: 400px;
+  margin: 20px auto;
+  color: red;
+  text-align: center;
+}
+
+.group:after {
+  content: "";
+  display: block;
+  clear: both;
+}
